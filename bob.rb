@@ -3,7 +3,7 @@ class Bob
   end
 
   def hey(remark)
-    if remark.upcase == remark
+    if /[a-zA-Z]+/.match?(remark) && remark.upcase == remark
       return 'Whoa, chill out!'
     elsif /\?/.match?(remark)
       return 'Sure.'
